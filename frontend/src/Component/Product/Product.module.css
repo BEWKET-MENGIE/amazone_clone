@@ -1,0 +1,119 @@
+.card_container {
+    width: 100%;
+    max-width: 270px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 4px;
+}
+
+.card_container:hover .button {
+    display: block;
+}
+
+.card_container img {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.title {
+    font-size: 15px;
+    font-weight: 500;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 5px;
+    color: #0f1111;
+}
+
+.title:hover {
+    color: #c7511f;
+    text-decoration: underline;
+}
+
+.button {
+    display: none;
+    padding: 8px 10px;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    background-color: #ffd814;
+    border: none;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+.button:hover {
+    background-color: #f7ca00;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.product_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+    justify-items: center;
+}
+
+.loader_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+/* Flexed version used for checkout/cart or single product views */
+.product_flexed {
+    max-width: 100%;
+    box-shadow: none;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.product_flexed img {
+    max-width: 180px;
+    height: 180px;
+}
+
+.product_flexed .title {
+    font-size: 18px;
+    font-weight: 600;
+    -webkit-line-clamp: unset;
+}
+
+.product_flexed .button {
+    display: block;
+    position: static;
+    width: 150px;
+}
+
+@media screen and (max-width: 760px) {
+    .product_flexed {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

@@ -1,0 +1,23 @@
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: white;
+}
+
+.products_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 20px;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 0 20px;
+    width: 100%;
+    justify-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .products_container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}
